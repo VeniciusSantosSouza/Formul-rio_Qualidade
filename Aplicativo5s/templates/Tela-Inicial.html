@@ -1,0 +1,101 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'Global/css/TelaInicial.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>DashBorard | Aralco</title>
+</head>
+<body>
+
+    <button class="botao-menu">
+        <i class="fa-solid fa-bars-staggered"></i>
+    </button>
+
+
+    <nav class="menu-lateral">                   <!--(<nav> indica que tem um menu de navegação)-->
+        <ul>   <!--Lista-->
+
+            <li class="menu">
+                <a href="#">
+                    <i class="fa-solid fa-house-chimney-user"> </i>
+                    Inicio
+                </a>
+
+                <ul class="submenu">
+                    <li>
+                        <a href="#">
+                            <i class="far fa-paper-plane"></i>
+                                Home
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menu">
+                <a href="#">
+                    <i class="fa-brands fa-wpforms"></i>
+                    Formulario
+                </a> 
+
+                <ul class="submenu">
+                    <li>
+                        <a href="#" >
+                            <i class="fas fa-pencil"></i>
+                             Instrução
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{% url 'qualidade' %}">
+                            <i class="fas fa-folder-open"></i>
+                             Qualidade
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-eye-low-vision"></i>
+                    Notificação
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-envelope"></i>
+                    contato
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+    <div class="backgroud"></div>
+
+    <main class="conteudo">
+
+
+        <h1>Desenvolvimento de um Sidebar</h1>
+        <p>{% lorem 1 b random %}</p>
+
+            {% block content %}
+                <!-- Esse conteúdo será substituído nas outras páginas -->
+            {% endblock %}
+
+    
+    </main>
+
+    <footer class="main_fooder">
+        <div class="Developer">
+            <a href="https://github.com/VeniciusSantosSouza" target="_blank" rel="noreferrer noopener"></a>
+        </div>
+    </footer>
+</body>
+</html>
+
+<script type="text/javascript" src="{% static 'Global/js/sidebar.js' %}"></script>

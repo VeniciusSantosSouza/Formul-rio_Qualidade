@@ -1,0 +1,236 @@
+/* 🔤 Importa a fonte "Poppins" do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* 🎨 Variáveis globais (cores, fontes, tamanhos, etc) */
+:root {
+    --color-primary-dark: #0D0C0D;                 /* Cor escura principal */
+    --color-second-dark: #191919;                 /* Segunda cor escura */
+    --font-primary: sans-serif;                   /* Fonte padrão */
+    --font-headings: 'Poppins', sans-serif;       /* Fonte para títulos */
+    --color-white: #ffffff;                       /* Cor branca */
+    --color-second-blue: #b3b6b6;                 /* Azul acinzentado */
+    --color-gray: #f0f5f5;                        /* Cinza claro */
+    --color-dark-text: #444;                      /* Cor escura para textos */
+
+    /* Cores para alertas e mensagens */
+    --color-info-light: #cce5ff;
+    --color-debug-light: #cce5ff;
+    --color-success-light: #d4edda;
+    --color-alert-light: #fff3cd;
+    --color-warning-light: #fff3cd;
+    --color-error-light: #f8d7da;
+    --color-info-dark: #4d86c4;
+    --color-debug-dark: #4d86c4;
+    --color-success-dark: #4a9c5d;
+    --color-alert-dark: #927f40;
+    --color-warning-dark: #927f40;
+    --color-error-dark: #da525d;
+
+    /* Tons de cinza (do mais claro ao mais escuro) */
+    --color-gray-0: #f9f9f9;
+    --color-gray-1: #e0e0e0;
+    --color-gray-2: #c7c7c7;
+    --color-gray-3: #aeaeae;
+    --color-gray-4: #959595;
+    --color-gray-5: #7d7d7d;
+    --color-gray-6: #646464;
+    --color-gray-7: #4b4b4b;
+    --color-gray-8: #323232;
+    --color-gray-9: #191919;
+
+    /* Cores principais de interface */
+    --primary-color: #3498db;                     /* Azul principal */
+    --secondary-color: #2980b9;                   /* Azul escuro */
+    --text-color: #ecf0f1;                        /* Cor clara para textos */
+    --text-secondary-color: #000f1f;              /* Texto escuro secundário */
+    --background-color: #34495e;                  /* Cor de fundo geral */
+}
+
+/* 🌐 Estilos gerais do corpo da página */
+body {
+    /* Exemplos de gradiente comentados acima */
+    background: linear-gradient(135deg, #000000 0%, #ffffff 100%); /* Gradiente preto para branco */
+    font-family: "Poppins", sans-serif;         /* Aplica a fonte Poppins */
+    margin: 0;                                   /* Remove margens padrão */
+    padding: 0;                                  /* Remove espaçamento padrão */
+    background-color: var(--text-color);        /* Cor de fundo alternativa */
+    min-height: 100vh;                           /* Altura mínima igual à altura da tela */
+}
+
+/* 📂 Menu lateral (escondido inicialmente) */
+.menu-lateral {
+    border-radius: 10px;                         /* Bordas arredondadas */
+    position: fixed;                             /* Fixo na tela */
+    left: -300px;                                /* Escondido à esquerda */
+    top: 0;
+    width: 300px;                                /* Largura do menu */
+    height: 100%;                                /* Altura da tela inteira */
+    background-color: var(--color-dark-text);   /* Cor escura de fundo */
+    z-index: 5;                                  /* Acima de outros elementos */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);     /* Sombra leve */
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Animação fluida */
+}
+
+/* Menu lateral ativado (visível) */
+.menu-lateral.ativo {
+    background: linear-gradient(135deg, #000000 0%, #ffffff 100%); /* Gradiente de fundo */
+    left: 0;                                    /* Move o menu para dentro da tela */
+}
+
+/* Lista do menu lateral */
+.menu-lateral ul {
+    list-style-type: none;                      /* Remove os marcadores da lista */
+    padding: 0;
+    margin-top: 80px;                           /* Espaço superior antes do primeiro item */
+}
+
+/* Itens da lista */
+.menu-lateral ul li {
+    padding: 15px 30px;                         /* Espaçamento interno dos itens */
+}
+
+/* Links nos itens da lista */
+.menu-lateral ul li a {
+    text-decoration: none;                      /* Remove sublinhado */
+    color: var(--text-color);                   /* Cor do texto */
+    font-size: 18px;
+    display: flex;                              /* Layout flexível */
+    align-items: center;                        /* Alinhamento vertical dos itens */
+    gap: 10px;                                  /* Espaço entre ícone e texto */
+    transition: all 0.3s ease;
+}
+
+/* Ícones dentro dos links */
+.menu-lateral ul li a i {
+    font-size: 24px;                            /* Tamanho do ícone */
+    transition: all 0.3s ease;
+}
+
+/* Hover nos itens do menu */
+.menu-lateral ul li:hover {
+    border-radius: 10px;                        /* Bordas arredondadas ao passar o mouse */
+    /*background-color: ...*/                   /* Estilos de fundo comentados */
+}
+
+/* Efeito nos ícones ao passar o mouse */
+.menu-lateral ul li a:hover i {
+    transform: translateX(5px) rotate(5deg);    /* Move e gira o ícone */
+}
+
+/* 🔘 Botão que ativa o menu */
+.botao-menu {
+    background-color: var(--color-gray-4);   /* Cor do botão */
+    position: fixed;                            /* Fixo na tela */
+    left: 20px;
+    top: 20px;
+    z-index: 6;                                 /* Acima do menu */
+    border-radius: 5px;
+    font-size: 20px;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;                            /* Mostra cursor de clique */
+    color: var(--text-color);                   /* Cor do texto do botão */
+    transition: all 0.5s ease;
+    box-shadow: 0 4px 15px rgba(102, 51, 153, 0.3); /* Sombra do botão */
+}
+
+/* Botão ao passar o mouse */
+.botao-menu:hover {
+    background-color: var(--secondary-color);   /* Nova cor ao hover */
+    transform: translateY(-2px);                /* Eleva o botão */
+    box-shadow: 0 6px 20px rgba(102, 51, 153, 0.4); /* Sombra mais intensa */
+}
+
+/* Botão reposicionado quando o menu está aberto */
+.botao-menu.ativo {
+    left: 230px;
+}
+.botao-menu.ativo:hover{
+    background-color: var(--color-error-dark);
+}
+
+/* 📝 Área de conteúdo principal */
+.conteudo {
+    margin-left: 80px;                          /* Espaço lateral à esquerda */
+    padding: 40px;
+    color: var(--text-color);                   /* Cor de texto */
+    color: var(--background-color);             /* Cor sobrescrita do texto */
+    transition: all 0.3s ease;
+}
+
+/* Conteúdo ajustado quando menu está visível */
+.conteudo.ativo {
+    margin-left: 380px;                         /* Aumenta margem esquerda */
+   /* background-color: var(--background-color);*/  /* Cor de fundo */
+    color: var(--text-color);                   /* Cor do texto */
+}
+
+/* 🔲 Fundo escurecido atrás do menu (overlay) */
+.backgroud {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);       /* Fundo preto semi-transparente */
+    opacity: 0;                                 /* Invisível por padrão */
+    visibility: hidden;
+    z-index: 4;                                 /* Atrás do menu */
+    transition: all 0.3s ease;
+}
+
+/* Overlay visível quando ativo */
+.backgroud.ativo {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 🔽 Submenu dentro de um item de menu (escondido inicialmente) */
+.menu-lateral ul li .submenu {
+    font-family: "Poppins", sans-serif;
+    display: none;                              /* Escondido por padrão */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 6px;
+}
+
+/* Submenu ativado (visível) */
+.menu-lateral ul li .submenu.ativo {
+    display: block;
+    animation: slideDown 0.3s ease;             /* Animação de entrada */
+}
+
+/* Itens do submenu */
+.menu-lateral ul li .submenu li {
+    margin: 0;
+    padding: 5px 10px;
+}
+
+/* Links do submenu */
+.menu-lateral ul li .submenu li a {
+    display: block;
+    font-size: 15px;
+    color: #ddd;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+/* Efeito ao passar o mouse nos links do submenu */
+.menu-lateral ul li .submenu li a:hover {
+    background: rgba(68, 68, 68, 0.8);          /* Fundo mais escuro */
+    border-radius: 6px;
+}
+
+/* Ícones dentro dos itens do submenu */
+.menu-lateral ul li .submenu li a i {
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+/* 📉 Animação de entrada do submenu */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); } /* Começa invisível e deslocado pra cima */
+    to { opacity: 1; transform: translateY(0); }        /* Termina visível e na posição normal */
+}

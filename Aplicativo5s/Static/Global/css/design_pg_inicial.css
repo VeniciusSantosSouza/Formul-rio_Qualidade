@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Share+Tech&display=swap');
+ *{
+    
+    font-family: "Share Tech", sans-serif;
+   
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    /*align-items: center;  ele esta interferindo no html principal*/
+    font-size: 25px;
+}
+
+
+.pos_perguntas input[type="radio"] {
+  transform: scale(1.5);
+  margin-right: 8px;
+}
+
+
+/*divisoria campos*/
+
+
+.campos_preencher {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.campos_preencher label {
+  display: inline-block;
+}
+
+
+
+
+.campos_preencher input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  height: 40px;
+}
+
+fieldset {
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  max-width: 900px; 
+  background-color: #ffffff;
+  font-size: 20px;
+}
+
+

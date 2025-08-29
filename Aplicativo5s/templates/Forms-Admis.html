@@ -1,0 +1,233 @@
+{% extends 'Tela-Menu.html' %}
+
+{% load static %}
+
+{% block title %}Formulário ADM Operacional{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'Global/css/design_pg_inicial.css' %}">
+
+<div class="cont_principal" id="formulario5s">
+    <h1>Formulário 5S</h1>
+
+    <form method="POST" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <h2>Formulário 5S | Administração Operacional</h2>
+
+        <fieldset>
+            <div class="campos_preencher">
+
+                <label for="idata_adm_operacional">Data:</label>
+                <input type="date" name="data_adm_operacional" id="idata_adm_operacional" />
+
+                <label for="ihora_adm_operacional">Hora:</label>
+                <input type="time" name="hora_adm_operacional" id="ihora_adm_operacional" />
+
+                <label for="imatricula_auditor_adm_operacional">Matrícula do Auditor:</label>
+                <input type="number" name="matricula_auditor_adm_operacional" id="imatricula_auditor_adm_operacional" />
+
+                <label for="inome_auditor_adm_operacional">Nome do auditor:</label>
+                <input type="text" name="nome_auditor_adm_operacional" id="inome_auditor_adm_operacional" />
+
+                <label for="imatricula_colaborador_adm_operacional">Matricula do Colaborador:</label>
+                <input type="number" name="matricula_colaborador_adm_operacional" id="imatricula_colaborador_adm_operacional" />
+
+                <label for="inome_colaborador_adm_operacional">Nome do Colaborador:</label>
+                <input type="text" name="nome_colaborador_adm_operacional" id="inome_colaborador_adm_operacional" />
+
+                <!-- formulario ADM Operacional perguntas 5S -->
+                <h3>1º S - UTILIZAÇÃO (SEIRI)</h3>
+                <div class="pos_perguntas">
+                    <p>1 - Existem apenas objetos/ferramentas necessários no local de trabalho? Observar.</p>
+                    <label for="icorreto_pergunta1_adm_operacional">C</label>
+                    <input type="radio" name="pergunta1_adm_operacional" id="icorreto_pergunta1_adm_operacional" value="Correto" />
+
+                    <label for="inao_correto_pergunta1_adm_operacional">N/C</label>
+                    <input type="radio" name="pergunta1_adm_operacional" id="inao_correto_pergunta1_adm_operacional" value="Incorreto" />
+
+                    <label for="inao_aplicavel_pergunta1_adm_operacional">N/A</label>
+                    <input type="radio" name="pergunta1_adm_operacional" id="inao_aplicavel_pergunta1_adm_operacional" value="Não aplicavel" />
+                </div>
+
+                <div class="pos_perguntas">
+                    <p>2 - Os fios estão arrumados?</p>
+                    <label for="icorreto_pergunta2_adm_operacional">C</label>
+                    <input type="radio" name="pergunta2_adm_operacional" id="icorreto_pergunta2_adm_operacional" value="Correto" />
+
+                    <label for="inao_correto_pergunta2_adm_operacional">N/C</label>
+                    <input type="radio" name="pergunta2_adm_operacional" id="inao_correto_pergunta2_adm_operacional" value="Incorreto" />
+
+                    <label for="inao_aplicavel_pergunta2_adm_operacional">N/A</label>
+                    <input type="radio" name="pergunta2_adm_operacional" id="inao_aplicavel_pergunta2_adm_operacional" value="Não aplicavel" />
+                </div>
+
+                <div class="pos_perguntas">
+                    <p>3 - As lixeiras estão sendo utilizadas de forma adequada? E o descarte dos materiais nas caçambas?</p>
+                    <label for="icorreto_pergunta3_adm_operacional">C</label>
+                    <input type="radio" name="pergunta3_adm_operacional" id="icorreto_pergunta3_adm_operacional" value="Correto" />
+
+                    <label for="inao_correto_pergunta3_adm_operacional">N/C</label>
+                    <input type="radio" name="pergunta3_adm_operacional" id="inao_correto_pergunta3_adm_operacional" value="Incorreto" />
+
+                    <label for="inao_aplicavel_pergunta3_adm_operacional">N/A</label>
+                    <input type="radio" name="pergunta3_adm_operacional" id="inao_aplicavel_pergunta3_adm_operacional" value="Não aplicavel" />
+                </div>
+
+                <h3>2º S - ORDENAÇÃO (SEITON)</h3>
+                <div class="pos_perguntas">
+                    <p>4 - Todos os locais estão identificados e padronizados?</p>
+                    <label for="icorreto_pergunta4_adm_operacional">C</label>
+                    <input type="radio" name="pergunta4_adm_operacional" id="icorreto_pergunta4_adm_operacional" value="Correto" />
+
+                    <label for="inao_correto_pergunta4_adm_operacional">N/C</label>
+                    <input type="radio" name="pergunta4_adm_operacional" id="inao_correto_pergunta4_adm_operacional" value="Incorreto" />
+
+                    <label for="inao_aplicavel_pergunta4_adm_operacional">N/A</label>
+                    <input type="radio" name="pergunta4_adm_operacional" id="inao_aplicavel_pergunta4_adm_operacional" value="Não aplicavel" />
+                </div>
+
+                <div class="pos_perguntas">
+                    <p>5 - Há organização em todos os espaços do setor?</p>
+                    <label for="icorreto_pergunta5_adm_operacional">C</label>
+                    <input type="radio" name="pergunta5_adm_operacional" id="icorreto_pergunta5_adm_operacional" value="Correto" />
+
+                    <label for="inao_correto_pergunta5_adm_operacional">N/C</label>
+                    <input type="radio" name="pergunta5_adm_operacional" id="inao_correto_pergunta5_adm_operacional" value="Incorreto" />
+
+                    <label for="inao_aplicavel_pergunta5_adm_operacional">N/A</label>
+                    <input type="radio" name="pergunta5_adm_operacional" id="inao_aplicavel_pergunta5_adm_operacional" value="Não aplicavel" />
+                </div>
+
+                <div class="pos_perguntas">
+                    <p>6 - Os objetos pessoais estão guardados de forma organizada?</p>
+                    <label for="icorreto_pergunta6_adm_operacional">C</label>
+                    <input type="radio" name="pergunta6_adm_operacional" id="icorreto_pergunta6_adm_operacional" value="Correto" />
+
+                    <label for="inao_correto_pergunta6_adm_operacional">N/C</label>
+                    <input type="radio" name="pergunta6_adm_operacional" id="inao_correto_pergunta6_adm_operacional" value="Incorreto" />
+
+                    <label for="inao_aplicavel_pergunta6_adm_operacional">N/A</label>
+                    <input type="radio" name="pergunta6_adm_operacional" id="inao_aplicavel_pergunta6_adm_operacional" value="Não aplicavel" />
+                </div>
+
+                <h3>3º S - LIMPEZA (SEISOU)</h3>
+                <div class="pos_perguntas">
+                    <p>7 - Há danos na estrutura do setor?</p>
+                    <label for="icorreto_pergunta7_adm_operacional">C</label>
+                    <input type="radio" name="pergunta7_adm_operacional" id="icorreto_pergunta7_adm_operacional" value="Correto" />
+
+                    <label for="inao_correto_pergunta7_adm_operacional">N/C</label>
+                    <input type="radio" name="pergunta7_adm_operacional" id="inao_correto_pergunta7_adm_operacional" value="Incorreto" />
+
+                    <label for="inao_aplicavel_pergunta7_adm_operacional">N/A</label>
+                    <input type="radio" name="pergunta7_adm_operacional" id="inao_aplicavel_pergunta7_adm_operacional" value="Não aplicavel" />
+                </div>
+
+                <div class="pos_perguntas">
+                    <p>8 - O chão está limpo? Isento de papel, plástico e sujeiras adversas.</p>
+                    <label for="icorreto_pergunta8_adm_operacional">C</label>
+                    <input type="radio" name="pergunta8_adm_operacional" id="icorreto_pergunta8_adm_operacional" value="Correto" />
+
+                    <label for="inao_correto_pergunta8_adm_operacional">N/C</label>
+                    <input type="radio" name="pergunta8_adm_operacional" id="inao_correto_pergunta8_adm_operacional" value="Incorreto" />
+
+                    <label for="inao_aplicavel_pergunta8_adm_operacional">N/A</label>
+                    <input type="radio" name="pergunta8_adm_operacional" id="inao_aplicavel_pergunta8_adm_operacional" value="Não aplicavel" />
+                </div>
+
+                <div class="pos_perguntas">
+                    <p>9 - As paredes, teto estão limpos?</p>
+                    <label for="icorreto_pergunta9_adm_operacional">C</label>
+                    <input type="radio" name="pergunta9_adm_operacional" id="icorreto_pergunta9_adm_operacional" value="Correto" />
+
+                    <label for="inao_correto_pergunta9_adm_operacional">N/C</label>
+                    <input type="radio" name="pergunta9_adm_operacional" id="inao_correto_pergunta9_adm_operacional" value="Incorreto" />
+
+                    <label for="inao_aplicavel_pergunta9_adm_operacional">N/A</label>
+                    <input type="radio" name="pergunta9_adm_operacional" id="inao_aplicavel_pergunta9_adm_operacional" value="Não aplicavel" />
+                </div>
+
+                <h3>4º S - SEIKETSU (SAÚDE E PADRONIZAÇÃO)</h3>
+                <div class="pos_perguntas">
+                    <p>10 - O colaborador está utilizando crachá?</p>
+                    <label for="icorreto_pergunta10_adm_operacional">C</label>
+                    <input type="radio" name="pergunta10_adm_operacional" id="icorreto_pergunta10_adm_operacional" value="Correto" />
+
+                    <label for="inao_correto_pergunta10_adm_operacional">N/C</label>
+                    <input type="radio" name="pergunta10_adm_operacional" id="inao_correto_pergunta10_adm_operacional" value="Incorreto" />
+
+                    <label for="inao_aplicavel_pergunta10_adm_operacional">N/A</label>
+                    <input type="radio" name="pergunta10_adm_operacional" id="inao_aplicavel_pergunta10_adm_operacional" value="Não aplicavel" />
+                </div>
+
+                <div class="pos_perguntas">
+                    <p>11 - Quais são os 5 sensos?</p>
+                    <label for="icorreto_pergunta11_adm_operacional">C</label>
+                    <input type="radio" name="pergunta11_adm_operacional" id="icorreto_pergunta11_adm_operacional" value="Correto" />
+
+                    <label for="inao_correto_pergunta11_adm_operacional">N/C</label>
+                    <input type="radio" name="pergunta11_adm_operacional" id="inao_correto_pergunta11_adm_operacional" value="Incorreto" />
+
+                    <label for="inao_aplicavel_pergunta11_adm_operacional">N/A</label>
+                    <input type="radio" name="pergunta11_adm_operacional" id="inao_aplicavel_pergunta11_adm_operacional" value="Não aplicavel" />
+                </div>
+
+                <div class="pos_perguntas">
+                    <p>12 - O procedimento se encontra em local de fácil acesso aos operadores? Verificar.</p>
+                    <label for="icorreto_pergunta12_adm_operacional">C</label>
+                    <input type="radio" name="pergunta12_adm_operacional" id="icorreto_pergunta12_adm_operacional" value="Correto" />
+
+                    <label for="inao_correto_pergunta12_adm_operacional">N/C</label>
+                    <input type="radio" name="pergunta12_adm_operacional" id="inao_correto_pergunta12_adm_operacional" value="Incorreto" />
+
+                    <label for="inao_aplicavel_pergunta12_adm_operacional">N/A</label>
+                    <input type="radio" name="pergunta12_adm_operacional" id="inao_aplicavel_pergunta12_adm_operacional" value="Não aplicavel" />
+                </div>
+
+                <h3>5º S - SHITSUK (AUTO-DISCIPLINA)</h3>
+                <div class="pos_perguntas">
+                    <p>13 - Quais são as metas de seu setor?</p>
+                    <label for="icorreto_pergunta13_adm_operacional">C</label>
+                    <input type="radio" name="pergunta13_adm_operacional" id="icorreto_pergunta13_adm_operacional" value="Correto" />
+
+                    <label for="inao_correto_pergunta13_adm_operacional">N/C</label>
+                    <input type="radio" name="pergunta13_adm_operacional" id="inao_correto_pergunta13_adm_operacional" value="Incorreto" />
+
+                    <label for="inao_aplicavel_pergunta13_adm_operacional">N/A</label>
+                    <input type="radio" name="pergunta13_adm_operacional" id="inao_aplicavel_pergunta13_adm_operacional" value="Não aplicavel" />
+                </div>
+
+                <div class="pos_perguntas">
+                    <p>14 - A mesa de trabalho está arrumada?</p>
+                    <label for="icorreto_pergunta14_adm_operacional">C</label>
+                    <input type="radio" name="pergunta14_adm_operacional" id="icorreto_pergunta14_adm_operacional" value="Correto" />
+
+                    <label for="inao_correto_pergunta14_adm_operacional">N/C</label>
+                    <input type="radio" name="pergunta14_adm_operacional" id="inao_correto_pergunta14_adm_operacional" value="Incorreto" />
+
+                    <label for="inao_aplicavel_pergunta14_adm_operacional">N/A</label>
+                    <input type="radio" name="pergunta14_adm_operacional" id="inao_aplicavel_pergunta14_adm_operacional" value="Não aplicavel" />
+                </div>
+
+                <div class="pos_perguntas">
+                    <p>15 - Colaborador utiliza uniforme?</p>
+                    <label for="icorreto_pergunta15_adm_operacional">C</label>
+                    <input type="radio" name="pergunta15_adm_operacional" id="icorreto_pergunta15_adm_operacional" value="Correto" />
+
+                    <label for="inao_correto_pergunta15_adm_operacional">N/C</label>
+                    <input type="radio" name="pergunta15_adm_operacional" id="inao_correto_pergunta15_adm_operacional" value="Incorreto" />
+
+                    <label for="inao_aplicavel_pergunta15_adm_operacional">N/A</label>
+                    <input type="radio" name="pergunta15_adm_operacional" id="inao_aplicavel_pergunta15_adm_operacional" value="Não aplicavel" />
+                </div>
+
+            </div>
+        </fieldset>
+
+        <button type="submit" class="botaoEnviar">Salvar</button>
+    </form>
+</div>
+{% endblock %}
+
+
